@@ -1,0 +1,88 @@
+<!-- /////////////// ponto de partida add-edit-tarefas /////////////// -->
+
+<form class="funcionario-form">
+  <!-- entrada Nome do Funcionario -->
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input matInput type="text" aria-label="Nome" [(ngModel)]="nome" name="nome">
+    </mat-form-field>
+  </div>
+
+  <!-- entrada Endereco do Funcionario -->
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Endereço</mat-label>
+      <input matInput type="text" aria-label="Endereco" [(ngModel)]="endereco" name="endereco">
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <!-- entrada Ramal do Funcionario -->
+      <div class="mb-3">
+        <div class="row">
+          <mat-form-field>
+            <mat-label>Ramal</mat-label>
+            <input matInput type="text" aria-label="Ramal" [(ngModel)]="ramal" name="ramal">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <!-- entrada Departamento do Funcionario -->
+      <div class="mb-3">
+        <div class="row">
+          <mat-form-field>
+            <mat-label>Departamento</mat-label>
+            <input matInput type="text" aria-label="Departamento" [(ngModel)]="departamento" name="departamento">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- entrada Email do Funcionario -->
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="text" aria-label="Email" [(ngModel)]="emailProfissional" name="emailProfissional">
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <!-- entrada Salario do Funcionario -->
+      <div class="mb-3">
+        <div class="row">
+          <mat-form-field>
+            <mat-label>Salário</mat-label>
+            <input matInput type="text" aria-label="Salário" [(ngModel)]="salario" name="salario">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <!-- entrada Data do Funcionario -->
+      <div class="mb-3">
+        <div class="row">
+          <mat-form-field>
+            <mat-label>Data</mat-label>
+            <input matInput type="datetime" aria-label="Data" [(ngModel)]="dataAdmissao" name="dataAdmissao">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- botao Adicionar tarefa -->
+  <button type="button" (click)="addFuncionario()" *ngIf="funcionario.id==0" class="btn btn-primary">
+    Adicionar
+</button>
+
+  <!-- botao Atualizar entrada Tipo de Tarefa -->
+  <button type="button" (click)="updateFuncionario()" *ngIf="funcionario.id!=0" class="btn btn-primary">
+      Atualizar
+  </button>
+
+</form>
